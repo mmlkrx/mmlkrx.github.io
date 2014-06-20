@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[not a newspaper]]></title>
+  <link href="http://mmlkrx.github.io/atom.xml" rel="self"/>
+  <link href="http://mmlkrx.github.io/"/>
+  <updated>2014-06-20T09:23:15-04:00</updated>
+  <id>http://mmlkrx.github.io/</id>
+  <author>
+    <name><![CDATA[Matthias Michael Loker]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Learn When Programming]]></title>
+    <link href="http://mmlkrx.github.io/blog/2014/06/20/how-to-learn-when-programming/"/>
+    <updated>2014-06-20T09:12:24-04:00</updated>
+    <id>http://mmlkrx.github.io/blog/2014/06/20/how-to-learn-when-programming</id>
+    <content type="html"><![CDATA[<p>Part 1</p>
+
+<p>At the Flatiron School, it’s all about trying to fit an elephant inside a fridge. Your brain being the fridge and Ruby plus everything else being the Elephant. Needless to say, it can feel a little bit crammed in there.</p>
+
+<p>But wait, this is a good thing! It means you’re expanding your comfort zone and actually learning something. Here’s why:</p>
+
+<h3>Novelty &ndash; a two-edged sword</h3>
+
+<p>Novelty can both be good and bad. You’re being awarded pleasure for learning, while feeling the discomfort of not knowing what to do. It’s confusing.</p>
+
+<p>Here’s the scary part:</p>
+
+<p>Everybody loves novelty. If your job doesn’t challenge you in new ways, it will only keep on dragging you down until you eventually quit. This is a no-brainer. But that’s just part of the story…</p>
+
+<h3>Discomfort and Emotions</h3>
+
+<p>Wouldn’t it be nice if the discomfort would actually feel good too? Well, chinese scientists have discovered that due to the nature of the design of our brain, this is not possible. Sorry.</p>
+
+<p>But wait, how about a workaround? Yes, now we’re talking. But before we go into that, let’s inspect discomfort in a little bit more detail:</p>
+
+<p>What I mean by discomfort, are generally negative emotions. Feeling lost, hopeless, angry, annoyed or frustrated are all pieces of the pie. So why do we feel them? Because they are necessary.</p>
+
+<p>Think about it, when you were a little kid and put your hand on that stove for the first time, you needn’t make that mistake twice. You see, <em>linking experiences to negative emotions will make them stick better</em>.</p>
+
+<p>And that’s really all there is to it. Read it again. It sounds simple, because it is!</p>
+
+<h3>But what about programming?</h3>
+
+<p>Persisting and struggling with concepts you don’t understand will assist you in learning them. Simply stated, it may be more painful, but you will gain a deeper understanding.</p>
+
+<p>To make a point, when I was working through the collections practice lab, it took me a full four hours to work through one method! But I discovered and learned a lot! Taking on pigeon organizer afterwards felt as easy as binge-watching a season of Game of Thrones.</p>
+
+<h3>So here is what you should do:</h3>
+
+<p>Use this piece of information as a framework to help putting things into perspective. The next time when you feel really frustrated, don’t take the easy way and look at someone elses code.</p>
+
+<p>Struggle with your own code first, feel frustrated, browse the Array Ruby documentation for the hundredths time. Stay with it. Remember that all this frustration will help you in the long run.</p>
+
+<p>No pain, no gain.</p>
+]]></content>
+  </entry>
+  
+</feed>
