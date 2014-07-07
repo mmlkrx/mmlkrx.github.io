@@ -1,61 +1,395 @@
 
-<!doctype html>
-<!-- START OF _layouts/default.html -->
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" >
-		<meta content="width=device-width,initial-scale=1" name="viewport">
-		<meta content="A blog about coding" name="description">
-		<meta content="not a newspaper" name="author">
-		
-		<title>not a newspaper</title>
-		
-		<!-- Styles -->
-		<link href="/stylesheets/main.css" rel="stylesheet">
-		
-		<!-- Google webfonts -->
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cousine">
-		
-		<!-- jQuery and plugins -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script src="/js/jquery.zclip.min.js"></script>
-		
-		<!-- Syntax highlighter -->
-		<link href="/stylesheets/prettify-hemisu.css" type="text/css" rel="stylesheet" />
-		<script type="text/javascript" src="/js/prettify.js"></script>
-		
-		<!--<link href="http://feeds.feedburner.com/turkeltaub" rel="alternate" title="not a newspaper" type="application/rss+xml" />-->
-		
-	</head>
-	<body onload="prettyPrint()">
-	
-		<div class="wrap">
-	
-			<header>
-				<div class="title">not a newspaper</div>
-				
-				<div class="navi">
-					<ul>
-						<li><a href="/">Blog</a></li>
-						<li><a href="/blog/archives">Archives</a></li>
-					</ul>
-				</div> <!-- // .navi -->
-			</header>
-		
-				<!-- START OF index.html -->
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>not a newspaper</title>
+  <meta name="author" content="Matthias Michael Loker">
 
+  
+  <meta name="description" content="Introduction: If you want to get your feet wet in actually creating an application that lives on the web, this is the guide you’re looking for. It &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="https://mmlkrx.github.io">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="not a newspaper" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+
+
+
+  
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <nav id="main-nav" role="navigation">
+<ul class="main-navigation">
+  <li><a href="/" class="nav-link">Blog</a></li>
+  <li><a href="/blog/archives" class="nav-link">Archives</a></li>
+  <li><a href="/atom.xml" class="nav-link">RSS</a></li>
+</ul>
+
+</nav>
+  <header role="banner"><hgroup>
 	
-		
-		<!-- START OF _includes/article.html -->
-<article>
-	<header>
-		<h1><a href="/blog/2014/06/20/how-to-learn-when-programming/">How To Learn When Programming</a></h1>
-		<time>20 June 2014</time>
-	</header>
-		<div class="content">
-			<p>Part 1</p>
+  <h1><a href="/">not a newspaper</a></h1>
+  
+    <h2>...</h2>
+  
+</hgroup>
+
+</header> 
+  
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/07/06/the-loose-guide-to-deploying-a-sinatra-app-on-heroku-for-intermediate-beginners-using-bootstrap-for-styling/">The Loose Guide to Deploying a Sinatra App on Heroku for Intermediate Beginners Using Bootstrap for Styling</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-06T23:03:45-04:00" pubdate data-updated="true">Jul 6<span>th</span>, 2014</time>
+        
+           | <a href="/blog/2014/07/06/the-loose-guide-to-deploying-a-sinatra-app-on-heroku-for-intermediate-beginners-using-bootstrap-for-styling/#disqus_thread"
+             data-disqus-identifier="https://mmlkrx.github.io/blog/2014/07/06/the-loose-guide-to-deploying-a-sinatra-app-on-heroku-for-intermediate-beginners-using-bootstrap-for-styling/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>Introduction:</h3>
+
+<p>If you want to get your feet wet in actually creating an application that lives on the web, this is the guide you’re looking for. It will take you from start to finish and only assumes you already have an idea. The following tools will be covered:</p>
+
+<ul>
+<li>Sinatra</li>
+<li>Heroku</li>
+<li>Git &amp; Github team workflow</li>
+<li>Bootstrap</li>
+</ul>
+
+
+<p>If at any point you don’t understand what’s going on, I’m sorry, but I can’t help you. After all, this is only a loose guide. Our example application will be a simple search app that scrapes reddit.</p>
+
+<h3>Before we start:</h3>
+
+<p>When thinking about what to do next, or how to approach a problem/feature, keep in mind the following principles:</p>
+
+<ul>
+<li>single responsibility</li>
+<li>make it work, make it right, make it fast</li>
+<li>form follows function</li>
+</ul>
+
+
+<p>We are building a single responsibility app. Sure you can think about features and fancy stuff to add to it, but right now our goal is to deploy something.</p>
+
+<h3>Basic outline of the process:</h3>
+
+<ol>
+<li>Think about what your app will do</li>
+<li>Write down your conclusions</li>
+<li>Set up the initial file structure</li>
+<li>Start working</li>
+<li>Finishing touches and troubleshooting</li>
+<li>Deploy to Heroku</li>
+</ol>
+
+
+<p>Let’s get into it!</p>
+
+<h3>1. Think about what your app will do</h3>
+
+<p>Your guiding principles here should be the single responsibility principle and working from the outside in. This means you should first write down a general list of things that your app has to do. In our case:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>search reddit/ELI5
+</span><span class='line'>choose best match
+</span><span class='line'>choose best answer
+</span><span class='line'>display best three answers</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see, this is quite simple. During this process, questions like “Should I use an API or just crawl?” have to be addressed and answered. Again, keep in mind that you want to make it work first and foremost. Don’t obsess with API’s or gems that confuse you if you already have a tool you know how to use.</p>
+
+<h3>2. Write down your conclusions:</h3>
+
+<p>Now put those answers to paper and be a little more precise. Start looking at some of the details but don’t get caught up in them just yet.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>get user input
+</span><span class='line'>search http://www.reddit.com/r/explainlikeimfive/search?q=  user.input  &restrict_sr=on&sort=relevance&t=all
+</span><span class='line'>open first search result with title explained
+</span><span class='line'>get the first answer with the highest upvotes
+</span><span class='line'>display that on our awesome web app</span></code></pre></td></tr></table></div></figure>
+
+
+<p>At this point you should already have a more concise idea of how you’re going to do things and you can already start thinking about division of labor.</p>
+
+<p>Who should build the backend?
+Who should do the crawling?
+Who should set up the repo?
+Who should style and create your views?
+Who writes tests?</p>
+
+<p>After those questions are answered, it’s finally time to get your hands dirty!</p>
+
+<h3>3. Set up the initial file structure:</h3>
+
+<p>At this point you should know enough about what your app has to do to be able to quickly set up your file structure and require your dependencies.</p>
+
+<p>Don’t forget to git init a new repo and set up a remote so your teammates can fork it.</p>
+
+<p>Keep in mind that when we want to deploy to Heroku later, we have to use Bundler and a Gemfile. A typical structure could look like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>root/
+</span><span class='line'>├── Gemfile
+</span><span class='line'>├── Gemfile.lock
+</span><span class='line'>├── README.md
+</span><span class='line'>├── Rakefile
+</span><span class='line'>├── app
+</span><span class='line'>│ ├── controllers
+</span><span class='line'>│ │ └── app_controller.rb
+</span><span class='line'>│ └── views
+</span><span class='line'>│   └── layout.erb
+</span><span class='line'>│   └── index.erb
+</span><span class='line'>├── config
+</span><span class='line'>│ └── environment.rb
+</span><span class='line'>├── config.ru
+</span><span class='line'>├── public
+</span><span class='line'>│ └── stylesheets
+</span><span class='line'>└── spec
+</span><span class='line'>├── controllers
+</span><span class='line'>├── features
+</span><span class='line'>└── spec_helper.rb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Your <code>Gemfile</code> could look like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">source</span> <span class="s1">&#39;http://rubygems.org&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;sinatra&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;pry&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;shotgun&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;rake&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;rspec&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;thin&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;nokogiri&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;require_all&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;rack-test&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Your <code>environment.rb</code> file could look like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;bundler/setup&#39;</span>
+</span><span class='line'><span class="no">Bundler</span><span class="o">.</span><span class="n">require</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;open-uri&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="no">Dir</span><span class="o">[</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">),</span> <span class="s2">&quot;../app/controllers&quot;</span><span class="p">,</span> <span class="s2">&quot;*.rb&quot;</span><span class="p">)</span><span class="o">].</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="nb">require</span> <span class="n">f</span><span class="p">}</span>
+</span><span class='line'><span class="no">Dir</span><span class="o">[</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">__FILE__</span><span class="p">),</span> <span class="s2">&quot;../app/models&quot;</span><span class="p">,</span> <span class="s2">&quot;*.rb&quot;</span><span class="p">)</span><span class="o">].</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="nb">require</span> <span class="n">f</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Your <code>config.ru</code> <em>has to</em> look something like this. Later we’ll get to why it has to.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;./config/environment.rb&#39;</span>
+</span><span class='line'><span class="n">use</span> <span class="ss">Rack</span><span class="p">:</span><span class="ss">:Static</span><span class="p">,</span> <span class="ss">:urls</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="s1">&#39;/css&#39;</span><span class="p">,</span> <span class="s1">&#39;/js&#39;</span><span class="o">]</span><span class="p">,</span> <span class="ss">:root</span> <span class="o">=&gt;</span> <span class="s1">&#39;public&#39;</span>
+</span><span class='line'><span class="n">run</span> <span class="no">AppController</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Download <a href="http://getbootstrap.com/">Bootstrap</a> and put it in it’s rightful place</p>
+
+<h3>4. Start working</h3>
+
+<p>At this point you should have pushed the initial setup of files and dependencies to github so that your teammates can fork your repo and get started on their own respective branches/features.</p>
+
+<h4>A few tips for using git correctly:</h4>
+
+<ul>
+<li>Everyone in the team should work on feature branches</li>
+<li>Once a feature branch is developed:
+
+<ul>
+<li>rebase master into it</li>
+<li>merge the branch into master (switch to branch master before merging)</li>
+<li>push to your remote repository</li>
+<li>submit a pull request to upstream master from github</li>
+</ul>
+</li>
+<li>You should commit often and leave precise comments</li>
+</ul>
+
+
+<p>Talk to each other every now and then to make sure the different parts of your app will also be able to talk to each other later.</p>
+
+<h4>How to use Bootstrap in the real world</h4>
+
+<p>CSS has many many different selectors and ways to style your websites, ok! Just stick with a neat little framework called google&amp;bootstrap. If &ndash; like me &ndash; you don’t know ____ about bootstrap and css and all that stuff, all you need to do is have these two tabs open:</p>
+
+<p><a href="http://getbootstrap.com/css/">Bootstrap Documentation</a>&amp;<a href="https://www.google.com/">Google</a></p>
+
+<p>The bootstrap documentation will give a few good ideas on elements and their styles, but can be overwhelming. Lucky for us, bootstrap is a popular framework and you can find a lot of your answers on the web.</p>
+
+<p>Just google what you want to do, then paste whatever bootstrap html you can find, and see what it looks like in the browser. Keep what you like and get rid of what you don’t like. Rinse and repeat, it’s really that simple.</p>
+
+<h3>5. Finishing touches and troubleshooting</h3>
+
+<p>After everyone has submitted their pull requests and you’ve merged everything into master, it is time to put the finishing touches on your app. This means fixing little bugs or formatting issues and making sure all your files are required properly.</p>
+
+<p>This should really not take too long since hopefully, you and your teammates were talking to each other, and stuck to the agreed formats.</p>
+
+<p>Keep in mind that rackup will only work correctly with your styles if you tell it where to look for your css directory. You can do that in the <code>config.ru</code> like above.</p>
+
+<p>Alternatively you could use shotgun which will work just fine, but avoiding this will cause problems with Heroku later.</p>
+
+<h3>6. Deploy to Heroku</h3>
+
+<p>If you’ve set up your Gemfile and your config.ru correctly, deploying to Heroku should be a breeze.</p>
+
+<ol>
+<li>Download the <a href="https://toolbelt.heroku.com/">Heroku Toolbelt</a></li>
+<li><a href="https://www.heroku.com">Sign up</a> for Heroku</li>
+<li>From your master branch run
+
+<ul>
+<li><code>git remote add heroku &lt;address&gt;</code></li>
+<li><code>git push heroku master</code></li>
+</ul>
+</li>
+<li>Watch it compile and copy the resulting link into the browser to see your web app live!</li>
+</ol>
+
+
+<p>Yes, it is really that simple. If you want to change the name of your Heroku app because blazing-mist-4652 isn’t up your alley, do it from the command line using <code>heroku apps:rename newname</code>.</p>
+
+<p>If you run into problems with your stylesheets, it is most likely for the same reasons rackup didn’t work. Heroku can’t find them. Take a look at the <code>config.ru</code> to change that.</p>
+
+<h3>Enjoy shipping your app</h3>
+
+<p><a href="http://get-an-answer.herokuapp.com/" target="_blank">www.get-an-answer.com</a></p>
+
+<p>Nice job on that app. From here you can feel free to add more functionality beyond the bare basics to make your app much sophisticated.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/06/20/how-to-learn-when-programming/">How to Learn When Programming</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-20T09:12:24-04:00" pubdate data-updated="true">Jun 20<span>th</span>, 2014</time>
+        
+           | <a href="/blog/2014/06/20/how-to-learn-when-programming/#disqus_thread"
+             data-disqus-identifier="https://mmlkrx.github.io/blog/2014/06/20/how-to-learn-when-programming/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Part 1</p>
 
 <p>At the Flatiron School, it’s all about trying to fit an elephant inside a fridge. Your brain being the fridge and Ruby plus everything else being the Elephant. Needless to say, it can feel a little bit crammed in there.</p>
 
@@ -94,74 +428,67 @@
 <p>Struggle with your own code first, feel frustrated, browse the Array Ruby documentation for the hundredths time. Stay with it. Remember that all this frustration will help you in the long run.</p>
 
 <p>No pain, no gain.</p>
-
-			
-			
-		</div>
-	<footer>
-		
-
-
-		
-
-
-
-
-	
-	
-	</footer>
-	
-</article>
-<!-- END OF _includes/article.html -->
-
-	
-	
-<div class="pagination">
-	
-	
-	<span class="total">1 of 1</span>
-	
-	
 </div>
-<!-- END OF index.html -->
-
-		
-			<footer>
-				Copyright &copy; 2014
-
-	Matthias Michael Loker
+  
+  
 
 
-			</footer>
-			
-		</div> <!-- // .wrap -->
-	</body>
-	<script>
-		$(document).ready(function() {
-			// Make images center
-			$('p:has(img)').css('text-align', 'center');
-			
-			// Add the image's title attribute as a caption
-			$('p:has(img)').append(function () {
-				return '<div class="caption">' + ($('img', this).attr('title') || "") + '</div>';
-			});
-			
-			// Prettify code
-			$('code').addClass('prettyprint');
-			$('pre code').addClass('linenums');
-			
-			// Copy to clipboard with button
-			$('pre:has(code)').prepend(function(){
-				return '<div class="clip-btn">copy to clipboard</div>';
-			});
-			$('.clip-btn').zclip({
-				path:'/js/ZeroClipboard.swf',
-				copy: $(this).next('code').text(),
-				afterCopy: function(){
-					$(this).replaceWith('<div class="clip-btn">copied!');
-					}
-			});
-		});
-	</script>
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Matthias Michael Loker -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mmlkrx';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
 </html>
-<!-- END OF _layouts/default.html -->
