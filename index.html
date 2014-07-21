@@ -9,7 +9,7 @@
   <meta name="author" content="Matthias Michael Loker">
 
   
-  <meta name="description" content="Introduction: If you want to get your feet wet in actually creating an application that lives on the web, this is the guide you’re looking for. It &hellip;">
+  <meta name="description" content="At the FlatironSchool, we are currently learning about JavaScript and jQuery. Since we aren’t yet building our own apps from scratch, we&rsquo;re &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -59,6 +59,92 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/07/20/why-content-delivery-networks-are-important/">Why Content Delivery Networks Are Important</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-20T19:46:50-04:00" pubdate data-updated="true">Jul 20<span>th</span>, 2014</time>
+        
+           | <a href="/blog/2014/07/20/why-content-delivery-networks-are-important/#disqus_thread"
+             data-disqus-identifier="https://mmlkrx.github.io/blog/2014/07/20/why-content-delivery-networks-are-important/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>At the FlatironSchool, we are currently learning about JavaScript and jQuery. Since we aren’t yet building our own apps from scratch, we&rsquo;re usually given a template.</p>
+
+<p>I took a closer look at one of the templates and will explain the following two lines, which are typically found at the bottom of your index page:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;script src=&quot;js/jquery-1.8.0.min.js&quot;&gt;&lt;\/script&gt;&#39;</span><span class="p">)</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Line 1 in our code requires jQery from Googles CDN.</p>
+
+<p>Line 2 basically says <em>&ldquo;If you can&rsquo;t reach Google load the local version&rdquo;.</em></p>
+
+<p>This got me thinking. Why do we even need a CDN if we have a local version any ways?</p>
+
+<p>Well, as it turns out, there are a number of reasons why this can be important&hellip;</p>
+
+<h3>What is a content delivery network?</h3>
+
+<blockquote><p>A Content Delivery Network refers to a large network of servers deployed across multiple networks in several data centers, often geographically distributed.</p></blockquote>
+
+<p>Content Delivery Networks are all over the web. You use them every day when downloading files from Dropbox, or watching Orange Is the New Black on Netflix.</p>
+
+<p>But apart from big consumer applications, they also play an important role in our day-to-day applications.</p>
+
+<h2>Three reasons why you should use a CDN for your code:</h2>
+
+<h3>1. Low latency</h3>
+
+<p>When using a professional content delivery provider, there is a much higher chance of one of their servers being geographically close to your user. This may not be the case when you host your website on your own server.</p>
+
+<p>As a result, content will be loaded faster.</p>
+
+<h3>2. Higher chance of having a cache-match</h3>
+
+<p>Static files like the jQuery library are cachable. Google will try and store them for up to one year in your computer. The more companies use their CDN to deliver jQuery, the higher the chances are that your user already has jQuery in their cache and does not require to download it at all.</p>
+
+<h3>3. Increased parallelism</h3>
+
+<p>Browsers typically limit the number of connections that can be made to any given site. Using a CDN will allow your users to download more of your local content in parallel. This in turn will increase the speed at which your app is up and running.</p>
+
+<h3>Conclusion</h3>
+
+<p>You may have noticed that all the stated reasons help increasing the speed of your app. Well, speed these days is important and every milisecond counts.</p>
+
+<p>People aren&rsquo;t patient so you should try and not only keep your code as clean and fast as possible, but also choose best practices over where to host your files and libraries.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>

@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Why Content Delivery Networks Are Important - not a newspaper</title>
+  <meta name="author" content="Matthias Michael Loker">
+
+  
+  <meta name="description" content="At the FlatironSchool, we are currently learning about JavaScript and jQuery. Since we aren’t yet building our own apps from scratch, we&rsquo;re &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="https://mmlkrx.github.io/blog/2014/07/20/why-content-delivery-networks-are-important">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="not a newspaper" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+
+
+
+  
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <nav id="main-nav" role="navigation">
+<ul class="main-navigation">
+  <li><a href="/" class="nav-link">Blog</a></li>
+  <li><a href="/blog/archives" class="nav-link">Archives</a></li>
+  <li><a href="/atom.xml" class="nav-link">RSS</a></li>
+</ul>
+
+</nav>
+  
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Why Content Delivery Networks Are Important</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-20T19:46:50-04:00" pubdate data-updated="true">Jul 20<span>th</span>, 2014</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="https://mmlkrx.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>At the FlatironSchool, we are currently learning about JavaScript and jQuery. Since we aren’t yet building our own apps from scratch, we&rsquo;re usually given a template.</p>
+
+<p>I took a closer look at one of the templates and will explain the following two lines, which are typically found at the bottom of your index page:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">jQuery</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;script src=&quot;js/jquery-1.8.0.min.js&quot;&gt;&lt;\/script&gt;&#39;</span><span class="p">)</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Line 1 in our code requires jQery from Googles CDN.</p>
+
+<p>Line 2 basically says <em>&ldquo;If you can&rsquo;t reach Google load the local version&rdquo;.</em></p>
+
+<p>This got me thinking. Why do we even need a CDN if we have a local version any ways?</p>
+
+<p>Well, as it turns out, there are a number of reasons why this can be important&hellip;</p>
+
+<h3>What is a content delivery network?</h3>
+
+<blockquote><p>A Content Delivery Network refers to a large network of servers deployed across multiple networks in several data centers, often geographically distributed.</p></blockquote>
+
+<p>Content Delivery Networks are all over the web. You use them every day when downloading files from Dropbox, or watching Orange Is the New Black on Netflix.</p>
+
+<p>But apart from big consumer applications, they also play an important role in our day-to-day applications.</p>
+
+<h2>Three reasons why you should use a CDN for your code:</h2>
+
+<h3>1. Low latency</h3>
+
+<p>When using a professional content delivery provider, there is a much higher chance of one of their servers being geographically close to your user. This may not be the case when you host your website on your own server.</p>
+
+<p>As a result, content will be loaded faster.</p>
+
+<h3>2. Higher chance of having a cache-match</h3>
+
+<p>Static files like the jQuery library are cachable. Google will try and store them for up to one year in your computer. The more companies use their CDN to deliver jQuery, the higher the chances are that your user already has jQuery in their cache and does not require to download it at all.</p>
+
+<h3>3. Increased parallelism</h3>
+
+<p>Browsers typically limit the number of connections that can be made to any given site. Using a CDN will allow your users to download more of your local content in parallel. This in turn will increase the speed at which your app is up and running.</p>
+
+<h3>Conclusion</h3>
+
+<p>You may have noticed that all the stated reasons help increasing the speed of your app. Well, speed these days is important and every milisecond counts.</p>
+
+<p>People aren&rsquo;t patient so you should try and not only keep your code as clean and fast as possible, but also choose best practices over where to host your files and libraries.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Matthias Michael Loker</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-20T19:46:50-04:00" pubdate data-updated="true">Jul 20<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="https://mmlkrx.github.io/blog/2014/07/20/why-content-delivery-networks-are-important/" data-via="" data-counturl="https://mmlkrx.github.io/blog/2014/07/20/why-content-delivery-networks-are-important/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/07/06/the-loose-guide-to-deploying-a-sinatra-app-on-heroku-for-intermediate-beginners-using-bootstrap-for-styling/" title="Previous Post: The Loose Guide To Deploying a Sinatra App On Heroku For Intermediate Beginners Using Bootstrap For Styling">&laquo; The Loose Guide To Deploying a Sinatra App On Heroku For Intermediate Beginners Using Bootstrap For Styling</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Matthias Michael Loker -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mmlkrx';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'https://mmlkrx.github.io/blog/2014/07/20/why-content-delivery-networks-are-important/';
+        var disqus_url = 'https://mmlkrx.github.io/blog/2014/07/20/why-content-delivery-networks-are-important/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
